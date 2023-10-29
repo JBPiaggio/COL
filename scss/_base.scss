@@ -6,6 +6,11 @@
 
 }
 
+$grad-fondo-1: rgba(2,0,36,1);
+$grad-fondo-2: rgba(9,9,121,1);
+$grad-fondo-3: rgba(56,110,184,1) ;
+$grad-fondo-4: rgba(97,52,159,1);
+
 :root {
     font-size: 16px;
 }
@@ -35,33 +40,40 @@ h2 {
         margin-top: auto;
     }
 }
-.nav-link{
+
+.nav-link {
     display: flex;
     align-items: center;
     text-decoration: none;
+    
     height: 2rem;
     color: rgb(255, 255, 255);
     font-family: 'Jost', sans-serif;
-    filter: opacity(0.5);
-    transition: opacity 1s;
-    &:hover{
+    opacity: 0.4;
+    transition: opacity 1s ease-out;
+
+    &:hover {
 
         background-color: rgba(0, 0, 0, 0);
-        filter: opacity(1);
+        opacity: 1;
     }
 }
-.link-text{
+
+.link-text {
     display: none;
     margin-left: 1rem;
 
 }
+
 .navbar {
     width: 8rem;
     height: 100vh;
     position: fixed;
     text-decoration: none;
     transition: width 600ms ease;
-   background-color: rgba(0, 0, 0, 0.613);
+    background-color: rgba(0, 0, 0, 0.253);
+    backdrop-filter: blur(4px);
+
     &-nav {
         list-style: none;
         padding: 0;
@@ -71,11 +83,12 @@ h2 {
         align-items: center;
         height: 95%;
     }
-    &:hover{
+
+    &:hover {
         width: 15rem;
-        .link-text{
+
+        .link-text {
             display: block;
         }
     }
 }
-

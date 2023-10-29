@@ -41,12 +41,12 @@ h2 {
   height: 2rem;
   color: rgb(255, 255, 255);
   font-family: "Jost", sans-serif;
-  filter: opacity(0.5);
-  transition: opacity 1s;
+  opacity: 0.4;
+  transition: opacity 1s ease-out;
 }
 .nav-link:hover {
   background-color: rgba(0, 0, 0, 0);
-  filter: opacity(1);
+  opacity: 1;
 }
 
 .link-text {
@@ -60,7 +60,8 @@ h2 {
   position: fixed;
   text-decoration: none;
   transition: width 600ms ease;
-  background-color: rgba(0, 0, 0, 0.613);
+  background-color: rgba(0, 0, 0, 0.253);
+  backdrop-filter: blur(4px);
 }
 .navbar-nav {
   list-style: none;
@@ -79,9 +80,24 @@ h2 {
 }
 
 body {
-  background: linear-gradient(rgb(6, 53, 123), rgb(3, 29, 66));
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 22%, rgb(56, 110, 184) 68%, rgb(97, 52, 159) 100%);
+  background-size: 300% 300%;
+  animation: gradiente_anim 12s ease-in-out infinite;
 }
 
+@keyframes gradiente_anim {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
 body::-webkit-scrollbar {
   width: 1rem;
 }
