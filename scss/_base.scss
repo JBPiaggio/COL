@@ -1,27 +1,43 @@
-* {
+@mixin mar0pad0{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-
 }
 
-$grad-fondo-1: rgba(2,0,36,1);
+@mixin ancho-alto($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+
+* {
+    @include mar0pad0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* $grad-fondo-1: rgba(2,0,36,1);
 $grad-fondo-2: rgba(9,9,121,1);
 $grad-fondo-3: rgba(56,110,184,1) ;
-$grad-fondo-4: rgba(97,52,159,1);
+$grad-fondo-4: rgba(97,52,159,1); */
+$grad-fondo-1: rgba(2,0,36,1);
+$grad-fondo-2: rgb(25, 25, 133);
+$grad-fondo-3: rgb(118, 175, 255) ;
+$grad-fondo-4: rgb(155, 83, 255);
 
 :root {
     font-size: 16px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    @include mar0pad0;
 }
 
 main {
     margin-left: 8rem;
+}
+@media (max-width: 600px){
+    main {
+        margin-left: 0rem;
+    }
 }
 
 h1 {
@@ -40,8 +56,14 @@ h2 {
         margin-top: auto;
     }
 }
+.logo{
+    margin-top: 2vh;
+    transform: scale(0.5);
+    transition: 600ms ease;
+}
 
 .nav-link {
+    
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -51,11 +73,13 @@ h2 {
     font-family: 'Jost', sans-serif;
     opacity: 0.4;
     transition: opacity 1s ease-out;
-
+    justify-content: space-around; //horizontal
+    
     &:hover {
 
         background-color: rgba(0, 0, 0, 0);
         opacity: 1;
+
     }
 }
 
@@ -64,10 +88,12 @@ h2 {
     margin-left: 1rem;
 
 }
-
+.flecha{
+    transform: rotate(0deg);
+    transition: 600ms ease;
+}
 .navbar {
-    width: 8rem;
-    height: 100vh;
+
     position: fixed;
     text-decoration: none;
     transition: width 600ms ease;
@@ -76,19 +102,54 @@ h2 {
 
     &-nav {
         list-style: none;
-        padding: 0;
-        margin: 0;
+        @include mar0pad0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 95%;
+      /*   height: 95%; */
     }
+}
+//DESKTOP
 
-    &:hover {
-        width: 15rem;
+@media (min-width: 600px) {
+    .nav-link{
+        margin-top: 4vh;
+        
+    }
+    .navbar{
+        
+        top: 0;
+        @include ancho-alto(8rem, 100%);
+        &:hover {
+            width: 15rem;
+            
+            .link-text {
+                display: block;
+            }
+            .flecha{
+                opacity: 1;
+                transform: rotate(180deg);
+            }
+            .logo{
+                transform: scale(1);
+            }
+        }
+    }
+}
 
-        .link-text {
-            display: block;
+
+// MOBILE
+@media (max-width: 600px) {
+    .navbar{
+        bottom: 0;
+        @include ancho-alto(100%, 4rem);
+        .logo{
+            display: none;
+        }
+        &-nav{
+            flex-direction: row;
+            padding-bottom: 50px;
+            
         }
     }
 }
