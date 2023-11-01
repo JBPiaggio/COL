@@ -196,13 +196,28 @@ body {
 .wrapper .titulo-dinamico {
   white-space: nowrap;
   color: aqua;
-  animation: titulo1 2s ease-in-out 1;
+  animation: titulo1 10s ease-in-out 1;
   animation-fill-mode: forwards;
   animation-delay: 0s;
   font-size: 7vw;
 }
 
 @keyframes titulo1 {
+  0% {
+    transform: translate(0px, 0vw);
+  }
+  20% {
+    transform: translate(0px, -7vw);
+  }
+  40% {
+    transform: translate(0px, -14vw);
+  }
+  60% {
+    transform: translate(0px, -21vw);
+  }
+  80% {
+    transform: translate(0px, -28vw);
+  }
   100% {
     transform: translate(0px, -35vw);
   }
