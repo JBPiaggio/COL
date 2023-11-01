@@ -120,6 +120,9 @@ h2 {
     bottom: 0;
     width: 100%;
     height: 4rem;
+    /*      .flecha{
+             display: none;
+         } */
   }
   .navbar .logo {
     display: none;
@@ -146,6 +149,62 @@ body {
   }
   100% {
     background-position: 0 50%;
+  }
+}
+/* 
+.wrapper{
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Montserrat', sans-serif;
+    .titulo-estatico{
+        color: aliceblue;
+    }
+    .titulo-dinamico{
+        color: aqua;
+        li span{
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border-left: 2px solid aqua;
+                animation: escribir 2s steps(8) infinite;
+                background: #00000020;
+            }
+        }
+    }
+}
+@keyframes escribir{
+    100%{
+        left: 100%;
+    }
+} */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  height: 7vw;
+  overflow: hidden;
+}
+.wrapper .titulo-estatico {
+  color: aliceblue;
+  font-size: 7vw;
+}
+.wrapper .titulo-dinamico {
+  white-space: nowrap;
+  color: aqua;
+  animation: titulo1 2s ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  font-size: 7vw;
+}
+
+@keyframes titulo1 {
+  100% {
+    transform: translate(0px, -35vw);
   }
 }
 body::-webkit-scrollbar {
