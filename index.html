@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles2.css">
     <title>COL</title>
-<!--importo las fuentes Montserrat y jost-->
+    <!--importo las fuentes Montserrat y jost-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -25,23 +29,23 @@
                     <a class="nav-link flecha">
                         <span class="material-symbols-outlined">
                             navigate_next
-                            </span>
+                        </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./index.html" class="nav-link">
                         <span class="material-symbols-outlined">
                             home
-                            </span>
-                            <span class="link-text">Inicio</span>
+                        </span>
+                        <span class="link-text">Inicio</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="./html/equipos.html" class="nav-link">
                         <span class="material-symbols-outlined">
                             groups
-                            </span>
-                            <span class="link-text">Equipos</span>
+                        </span>
+                        <span class="link-text">Equipos</span>
 
                     </a>
                 </li>
@@ -49,8 +53,8 @@
                     <a href="./html/noticias.html" class="nav-link">
                         <span class="material-symbols-outlined">
                             breaking_news
-                            </span>
-                            <span class="link-text">Noticias</span>
+                        </span>
+                        <span class="link-text">Noticias</span>
 
                     </a>
                 </li>
@@ -58,8 +62,8 @@
                     <a href="./html/unite.html" class="nav-link">
                         <span class="material-symbols-outlined">
                             approval_delegation
-                            </span>
-                            <span class="link-text">Unite</span>
+                        </span>
+                        <span class="link-text">Unite</span>
 
                     </a>
                 </li>
@@ -67,8 +71,8 @@
                     <a href="./html/coaching.html" class="nav-link">
                         <span class="material-symbols-outlined">
                             school
-                            </span>
-                            <span class="link-text">Coaching</span>
+                        </span>
+                        <span class="link-text">Coaching</span>
 
                     </a>
                 </li>
@@ -76,8 +80,8 @@
                     <a href="./html/nosotros.html" class="nav-link">
                         <span class="material-symbols-outlined">
                             more_horiz
-                            </span>
-                            <span class="link-text">Nosotros</span>
+                        </span>
+                        <span class="link-text">Nosotros</span>
 
                     </a>
                 </li>
@@ -85,23 +89,33 @@
         </nav>
     </header>
     <main>
-        <div class="wrapper">
-            <div class="titulo-estatico">
-                COM
-            </div>
-            <ul class="titulo-dinamico">
-                <li><span>UNIDAD</span></li>
-                <li><span>PETICIÓN</span></li>
-                <li><span>PROMISO</span></li>
-                <li><span>PAÑERISMO</span></li>
-                <li><span>PLEXITY</span></li>
+   <div class="titulo">
+        <svg style="opacity:0;position:fixed;z-index:-999">
+            <defs>
+                <clipPath id="clip" clipPathUnits="objectBoundingBox">
+                   
+                    <text x="0.5" y="0.12" font-size="0.2" text-anchor="end" alignment-baseline="middle">COM</text>
+               
+                    <text class="titulo-animado" x="0.5" y="0.32" font-size="0.2" text-anchor="start" alignment-baseline="middle">UNIDAD</text>
+                    <text class="titulo-animado" x="0.5" y="0.52" font-size="0.2" text-anchor="start" alignment-baseline="middle">PETICIÓN</text>
+                    <text class="titulo-animado" x="0.5" y="0.72" font-size="0.2" text-anchor="start" alignment-baseline="middle">PROMISO</text>
+                    <text class="titulo-animado" x="0.5" y="0.92" font-size="0.2" text-anchor="start" alignment-baseline="middle">PAÑERISMO</text>
+                    <text class="titulo-animado" x="0.5" y="1.12" font-size="0.2" text-anchor="start" alignment-baseline="middle">PLEXITY</text>
 
-            </ul>
-        </div>
-   
+                </clipPath>
+            </defs>
+        </svg>
+    
+        <video autoplay playsinline muted loop preload
+            poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/oceanshot.jpg">
+            <source src="./img/vid/bg.mp4" />
+        </video>
+    </div>
+
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>

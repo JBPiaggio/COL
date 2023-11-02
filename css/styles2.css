@@ -35,6 +35,15 @@ h2 {
   font-family: "Jost", sans-serif;
 }
 
+/*fondo*/
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, rgb(2, 0, 36) 0%, rgb(25, 25, 133) 22%, rgb(118, 175, 255) 68%, rgb(155, 83, 255) 100%);
+  background-size: 300% 300%;
+  animation: gradiente_anim 12s ease-in-out infinite;
+}
+
 /*navbar*/
 .nav-item {
   width: 100%;
@@ -132,14 +141,6 @@ h2 {
     padding-bottom: 50px;
   }
 }
-body {
-  height: 100vh;
-  width: 100vw;
-  background: linear-gradient(45deg, rgb(2, 0, 36) 0%, rgb(25, 25, 133) 22%, rgb(118, 175, 255) 68%, rgb(155, 83, 255) 100%);
-  background-size: 300% 300%;
-  animation: gradiente_anim 12s ease-in-out infinite;
-}
-
 @keyframes gradiente_anim {
   0% {
     background-position: 0 50%;
@@ -182,44 +183,72 @@ body {
         left: 100%;
     }
 } */
-.wrapper {
-  display: flex;
-  justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  height: 7vw;
+text {
+  font-family: "Nunito Sans", sans-serif;
+  scale: 60% 100%;
+}
+
+video {
+  -webkit-clip-path: url(#clip);
+  clip-path: url(#clip);
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.titulo {
+  height: 100px;
   overflow: hidden;
+  scale: 1;
 }
-.wrapper .titulo-estatico {
-  color: aliceblue;
-  font-size: 7vw;
-}
-.wrapper .titulo-dinamico {
-  white-space: nowrap;
-  color: aqua;
+
+.titulo-animado {
   animation: titulo1 10s ease-in-out 1;
   animation-fill-mode: forwards;
   animation-delay: 0s;
-  font-size: 7vw;
 }
 
+/* 
+.wrapper{
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+
+    height: 7rem;
+
+    .titulo-estatico{
+        color: rgb(255, 255, 255);
+        font-size: 7rem;
+    }
+    .titulo-dinamico{
+        white-space: nowrap;
+        color: rgb(255, 255, 255);
+        animation: titulo1 10s ease-in-out 1;
+        animation-fill-mode: forwards;
+        animation-delay: 0s;
+        font-size: 7rem;
+
+    }
+}*/
 @keyframes titulo1 {
   0% {
-    transform: translate(0px, 0vw);
+    transform: translate(0px, 0px);
   }
   20% {
-    transform: translate(0px, -7vw);
+    transform: translate(0px, -0.2px);
   }
   40% {
-    transform: translate(0px, -14vw);
+    transform: translate(0px, -0.4px);
   }
   60% {
-    transform: translate(0px, -21vw);
+    transform: translate(0px, -0.6px);
   }
   80% {
-    transform: translate(0px, -28vw);
+    transform: translate(0px, -0.8px);
   }
   100% {
-    transform: translate(0px, -35vw);
+    transform: translate(0px, -1px);
   }
 }
 body::-webkit-scrollbar {

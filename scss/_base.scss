@@ -47,7 +47,14 @@ h1 {
 h2 {
     font-family: 'Jost', sans-serif;
 }
-
+/*fondo*/
+body{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, $grad-fondo-1 0%, $grad-fondo-2 22%, $grad-fondo-3 68%, $grad-fondo-4 100%);
+    background-size: 300% 300%;
+    animation: gradiente_anim 12s ease-in-out infinite;
+}
 /*navbar*/
 .nav-item {
     width: 100%;
