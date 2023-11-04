@@ -1,0 +1,63 @@
+.container_teams{
+    display: flex;
+    margin-left: 10%;
+    width: 80%;
+    box-sizing: border-box;
+    height: 30vh;
+    background-color: $gris-blur;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+.image_box{
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 0.5%;
+    height: 20rem;
+    img{
+   
+        width: 100%;
+        height: calc(100% - 10vh);
+        object-fit: cover;
+        transition: 1.5s;
+        &:nth-child(odd){
+            border-radius:50px;
+        }
+    }
+    &:hover{
+        flex: 1 1 50%;
+        width: 100%;
+    }
+}
+.descripcion_equipo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+/* .container_teams {
+    display: flex;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.image_box {
+    flex: 1;
+    overflow: hidden;
+    transition: flex 0.5s, width 0.5s;
+    margin: 0.5%;
+    height: 100px;
+   
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        transition: width 1.5s;
+    }
+
+    &:hover {
+        flex: 1 1 50%;
+        width: 200%;
+    }
+} */

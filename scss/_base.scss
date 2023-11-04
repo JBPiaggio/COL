@@ -22,11 +22,15 @@ $grad-fondo-1: rgba(2,0,36,1);
 $grad-fondo-2: rgb(25, 25, 133);
 $grad-fondo-3: rgb(118, 175, 255) ;
 $grad-fondo-4: rgb(155, 83, 255);
+$gris-blur: rgba(0, 0, 0, 0.253);
 
 :root {
     font-size: 16px;
 }
-
+p{
+    font-family: 'Jost', sans-serif;
+    color: aliceblue;
+}
 body {
     @include mar0pad0;
 }
@@ -104,7 +108,7 @@ body{
     position: fixed;
     text-decoration: none;
     transition: width 600ms ease;
-    background-color: rgba(0, 0, 0, 0.253);
+    background-color: $gris-blur;
     backdrop-filter: blur(4px);
 
     &-nav {
@@ -148,6 +152,7 @@ body{
 // MOBILE
 @media (max-width: 600px) {
     .navbar{
+        z-index: 1;
         bottom: 0;
         @include ancho-alto(100%, 4rem);
         .logo{

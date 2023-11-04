@@ -13,6 +13,11 @@ $grad-fondo-4: rgba(97,52,159,1); */
   font-size: 16px;
 }
 
+p {
+  font-family: "Jost", sans-serif;
+  color: aliceblue;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -126,6 +131,7 @@ body {
 }
 @media (max-width: 600px) {
   .navbar {
+    z-index: 1;
     bottom: 0;
     width: 100%;
     height: 4rem;
@@ -183,6 +189,10 @@ body {
         left: 100%;
     }
 } */
+@font-face {
+  font-family: "bold";
+  src: url(../fuente/bold.otf);
+}
 text {
   font-family: "Nunito Sans", sans-serif;
   scale: 60% 100%;
@@ -251,6 +261,219 @@ video {
     transform: translate(0px, -1px);
   }
 }
+.flex_noticias {
+  display: flex;
+  justify-content: center;
+}
+
+.noticias {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  grid-gap: 0px;
+  background-color: rgba(0, 0, 0, 0.253);
+  border-radius: 25px;
+  overflow: scroll;
+}
+
+@media (max-width: 600px) {
+  .noticias {
+    height: 40vh;
+  }
+  .noticias p {
+    word-wrap: break-word;
+  }
+  .noticias img {
+    height: 12vh;
+    border-radius: 25px;
+  }
+  .card img {
+    height: 20vh;
+  }
+}
+.carrusel_contenedor {
+  margin-top: 5vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.253);
+}
+
+.carrusel {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: smooth;
+  gap: 10rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+.carrusel img {
+  scale: 0.5;
+}
+
+.card {
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parrafo_index {
+  margin-top: 5vh;
+  background-color: rgba(0, 0, 0, 0.253);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+}
+.parrafo_index p {
+  padding: 10px;
+}
+
+.centrado {
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+}
+.centrado .que-es-col {
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.253);
+  backdrop-filter: blur(9px);
+  border-radius: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "p p p" "p p p" "img p p";
+}
+.centrado .que-es-col p {
+  padding: 10px;
+  font-size: 1rem;
+  font-family: "Jost", sans-serif;
+  color: rgb(255, 255, 255);
+  grid-area: p;
+}
+.centrado .que-es-col img {
+  grid-area: img;
+  padding: 10px;
+  height: 15vh;
+  width: fit-content;
+  border-radius: 10%;
+}
+
+/* .centrado {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+
+    .que-es-col {
+        width: 80vw;
+        background-color: $gris-blur;
+        backdrop-filter: blur(9px);
+        border-radius: 5%;
+        display: grid;
+        grid-template-columns: repeat(5, 65px);
+        grid-template-rows: repeat(5, 60px);
+
+        p {
+
+            padding: 10px;
+            font-size: 1rem;
+            font-family: 'Jost', sans-serif;
+            color: rgb(255, 255, 255);
+
+            &.superior1 {
+
+                grid-row: 1/3;
+                grid-column: 1/5;
+            }
+
+            &.inferior1 {
+                grid-row: 4/6;
+                grid-column: 4 /6;
+            }
+        }
+
+        img {
+            grid-row: 4/5;
+            grid-column: 1/2;
+            padding: 10px;
+            height: 15vh;
+            width: fit-content;
+            border-radius: 10%;
+
+        }
+    }
+
+}  */
+.container_teams {
+  display: flex;
+  margin-left: 10%;
+  width: 80%;
+  box-sizing: border-box;
+  height: 30vh;
+  background-color: rgba(0, 0, 0, 0.253);
+  margin-bottom: 10px;
+  border-radius: 25px;
+}
+
+.image_box {
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0.5%;
+  height: 20rem;
+}
+.image_box img {
+  width: 100%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: 1.5s;
+}
+.image_box img:nth-child(odd) {
+  border-radius: 50px;
+}
+.image_box:hover {
+  flex: 1 1 50%;
+  width: 100%;
+}
+
+.descripcion_equipo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+/* .container_teams {
+    display: flex;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.image_box {
+    flex: 1;
+    overflow: hidden;
+    transition: flex 0.5s, width 0.5s;
+    margin: 0.5%;
+    height: 100px;
+
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        transition: width 1.5s;
+    }
+
+    &:hover {
+        flex: 1 1 50%;
+        width: 200%;
+    }
+} */
 body::-webkit-scrollbar {
   width: 1rem;
 }
