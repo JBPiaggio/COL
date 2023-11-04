@@ -47,6 +47,7 @@ body {
   background: linear-gradient(45deg, rgb(2, 0, 36) 0%, rgb(25, 25, 133) 22%, rgb(118, 175, 255) 68%, rgb(155, 83, 255) 100%);
   background-size: 300% 300%;
   animation: gradiente_anim 12s ease-in-out infinite;
+  background-attachment: fixed;
 }
 
 /*navbar*/
@@ -337,32 +338,44 @@ video {
 
 .centrado {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding-top: 5vh;
+  padding-top: 1vh;
 }
-.centrado .que-es-col {
-  width: 80vw;
+.centrado .articulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2vh;
   background-color: rgba(0, 0, 0, 0.253);
-  backdrop-filter: blur(9px);
-  border-radius: 5%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "p p p" "p p p" "img p p";
+  border-radius: 25px;
+  width: 90vw;
 }
-.centrado .que-es-col p {
-  padding: 10px;
-  font-size: 1rem;
-  font-family: "Jost", sans-serif;
-  color: rgb(255, 255, 255);
-  grid-area: p;
+.centrado .articulo-titulo {
+  flex-direction: row;
+  margin-left: 10vw;
+  color: aliceblue;
 }
-.centrado .que-es-col img {
-  grid-area: img;
+.centrado .articulo-logo {
+  width: 35vw;
+  float: inherit;
+  transform: translateY(1.5vh);
+}
+.centrado .articulo-cuerpo {
+  width: 80vw;
+  border-radius: 25px;
+  margin-left: 5vw;
+  padding-bottom: 20px;
+}
+.centrado p {
   padding: 10px;
-  height: 15vh;
-  width: fit-content;
-  border-radius: 10%;
+}
+
+.lema {
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  padding: 20px;
 }
 
 /* .centrado {
@@ -443,10 +456,17 @@ video {
 }
 
 .descripcion_equipo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10%;
   width: 80%;
+  height: 100px;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.253);
+  border-radius: 25px;
+}
+.descripcion_equipo p {
+  padding: 10px;
 }
 
 /* .container_teams {
@@ -474,6 +494,62 @@ video {
         width: 200%;
     }
 } */
+.noticia {
+  position: relative;
+}
+.noticia_banner {
+  width: 90vw;
+  margin-left: 5vw;
+  margin-top: 5vw;
+  border-radius: 25px;
+}
+.noticia_blur {
+  width: 60vw;
+  margin-left: 20vw;
+  background-color: rgba(0, 0, 0, 0.253);
+  position: absolute;
+  top: 17vh;
+  backdrop-filter: blur(7px);
+  border-radius: 25px;
+}
+.noticia_cabecera {
+  padding: 10px;
+  color: aliceblue;
+}
+.noticia_cuerpo {
+  margin-top: 12vh;
+  background-color: rgba(0, 0, 0, 0.253);
+  width: 90vw;
+  margin-left: 5vw;
+  border-radius: 25px;
+  padding: 10px;
+}
+.noticia_cuerpo img {
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 25px;
+}
+
+.recomendados_sub {
+  margin-top: 3vh;
+  background-color: rgba(0, 0, 0, 0.253);
+  padding: 10px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  margin-left: 25vw;
+}
+.recomendados_sub h2 {
+  color: aliceblue;
+}
+.recomendados_sub img {
+  width: 40vw;
+  border-radius: 10px;
+}
+
 body::-webkit-scrollbar {
   width: 1rem;
 }

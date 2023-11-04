@@ -1,41 +1,49 @@
 
 .centrado {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding-top: 5vh;
-
-    .que-es-col {
-        width: 80vw;
+    padding-top: 1vh;
+    .articulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 2vh;
         background-color: $gris-blur;
-        backdrop-filter: blur(9px);
-        border-radius: 5%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto auto auto;
-        grid-template-areas: 
-        'p p p'
-        'p p p'
-        'img p p';
+        border-radius: 25px;
+        width: 90vw;
+        &-titulo{
+            flex-direction: row;
+            margin-left: 10vw;
+            color: aliceblue;
 
-        p {
-
-            padding: 10px;
-            font-size: 1rem;
-            font-family: 'Jost', sans-serif;
-            color: rgb(255, 255, 255);
-           grid-area: p;
+      
         }
-
-        img {
-            grid-area: img;
-            padding: 10px;
-            height: 15vh;
-            width: fit-content;
-            border-radius: 10%;
+        &-logo{
+            width: 35vw;
+            float: inherit;
+            transform: translateY(1.5vh);
 
         }
+        &-cuerpo{
+            width: 80vw;
+            border-radius: 25px;
+            margin-left: 5vw;
+            padding-bottom: 20px;
+        }
+        
     }
-
+    
+    p{
+        
+        padding: 10px;
+    }
+}
+.lema{
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    padding: 20px;
 }
 
 /* .centrado {
