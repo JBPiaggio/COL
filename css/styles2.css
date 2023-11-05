@@ -293,12 +293,6 @@ video {
     height: 20vh;
   }
 }
-.carrusel_contenedor {
-  margin-top: 5vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.253);
-}
-
 .carrusel {
   display: grid;
   grid-auto-flow: column;
@@ -309,11 +303,13 @@ video {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
+.carrusel_contenedor {
+  margin-top: 5vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.253);
+}
 .carrusel::-webkit-scrollbar {
   display: none;
-}
-.carrusel img {
-  scale: 0.5;
 }
 
 .card {
@@ -322,18 +318,52 @@ video {
   justify-content: center;
   align-items: center;
 }
+.card img {
+  scale: 0.8;
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+.card img:nth-child(even) {
+  scale: 1;
+}
 
 .parrafo_index {
   margin-top: 5vh;
   background-color: rgba(0, 0, 0, 0.253);
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 90vw;
+  margin-left: 5vw;
+  margin-bottom: 5vw;
 }
 .parrafo_index p {
   padding: 10px;
+}
+
+@keyframes sponsor_inf {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.sponsors {
+  overflow: hidden;
+  padding: 60px 0;
+  background-color: rgba(0, 0, 0, 0.253);
+  white-space: nowrap;
+}
+.sponsors_slide {
+  display: inline-block;
+  animation: 20s sponsor_inf infinite linear;
+}
+.sponsors_slide img {
+  margin-right: 15vw;
+  width: 25vw;
 }
 
 .centrado {
@@ -523,6 +553,9 @@ video {
   margin-left: 5vw;
   border-radius: 25px;
   padding: 10px;
+}
+.noticia_cuerpo p {
+  padding: 35px;
 }
 .noticia_cuerpo img {
   width: 90%;

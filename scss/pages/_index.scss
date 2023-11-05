@@ -158,11 +158,7 @@ video {
 }
 
 
-.carrusel_contenedor{
-    margin-top: 5vh;
-    width: 100vw;
-    background-color: $gris-blur;
-}
+
 .carrusel{
     display: grid;
     grid-auto-flow: column;
@@ -172,28 +168,70 @@ video {
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    &_contenedor{
+        margin-top: 5vh;
+        width: 100vw;
+        background-color: $gris-blur;
+    }
     &::-webkit-scrollbar{
         display: none;
     }
-    img{
-        scale: 0.5;
-    }
+
 }
 .card{
     scroll-snap-align: start;
     display: flex;
     justify-content:center;
     align-items: center;
+    
+    img{
+        scale: 0.8;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        &:nth-child(even){
+            scale: 1;
+        }
+    }
 }
 .parrafo_index{
     margin-top: 5vh;
     background-color: $gris-blur;
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 90vw;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
     p{
         padding: 10px;
     }
+}
+
+
+@keyframes sponsor_inf{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.sponsors{
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: $gris-blur;
+    white-space: nowrap;
+
+    &_slide {
+        display: inline-block;
+        animation: 20s sponsor_inf infinite linear;
+        img{
+            margin-right: 15vw;
+            width: 25vw;
+        }
+    }
+   
 }
