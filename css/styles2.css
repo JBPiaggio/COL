@@ -38,6 +38,7 @@ h1 {
 
 h2 {
   font-family: "Jost", sans-serif;
+  color: aliceblue;
 }
 
 /*fondo*/
@@ -270,9 +271,6 @@ video {
 .noticias {
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(2, 150px);
-  grid-template-rows: repeat(2, 150px);
-  grid-gap: 0px;
   background-color: rgba(0, 0, 0, 0.253);
   border-radius: 25px;
   overflow: scroll;
@@ -281,6 +279,9 @@ video {
 @media (max-width: 600px) {
   .noticias {
     height: 40vh;
+    grid-gap: 3vw;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 150px);
   }
   .noticias p {
     word-wrap: break-word;
@@ -366,6 +367,26 @@ video {
   width: 25vw;
 }
 
+@media (min-width: 600px) {
+  .noticias {
+    width: 85vw;
+    height: 47vh;
+    overflow: hidden;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(1, 20vw);
+  }
+  .noticias p {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+  .noticias img {
+    height: 15vw;
+    border-radius: 25px;
+  }
+  .card img {
+    height: 10vh;
+  }
+}
 .centrado {
   display: flex;
   flex-direction: column;

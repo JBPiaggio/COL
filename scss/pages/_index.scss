@@ -130,9 +130,7 @@ video {
 .noticias{
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(2,150px);
-    grid-template-rows: repeat(2,150px);
-    grid-gap: 0px;
+ 
     background-color: $gris-blur;
     border-radius: 25px;
     overflow: scroll;
@@ -141,7 +139,10 @@ video {
 @media (max-width: 600px) {
     .noticias{
         height: 40vh;
-
+        grid-gap: 3vw;
+        grid-template-columns: repeat(2,150px);
+        grid-template-rows: repeat(2,150px);
+        
         p{
             word-wrap: break-word;
 
@@ -234,4 +235,28 @@ video {
         }
     }
    
+}
+@media (min-width: 600px) {
+    .noticias{
+        width: 85vw;
+        height: 47vh;
+        overflow: hidden;
+        grid-template-columns: repeat(4,20vw);
+        grid-template-rows: repeat(1,20vw);
+        p{
+            font-size: 1.5rem;
+            padding: 20px;
+        }
+       
+        img{
+            height: 15vw;
+            border-radius: 25px;
+
+        }
+    }
+    .card{
+        img{
+            height: 10vh;
+        }
+    }
 }
