@@ -785,6 +785,25 @@ video {
 }
 
 /*desktop*/
+@media (min-width: 600px) {
+  .coaches img {
+    height: 20vw;
+    margin-top: 55vh;
+  }
+  .parrafo_coaches {
+    width: 80vw;
+    margin-left: 5vw;
+    margin-top: 3vh;
+  }
+  .pedido {
+    width: 80vw;
+    margin-left: 5vw;
+    margin-top: 3vh;
+  }
+  .input {
+    width: 120px;
+  }
+}
 /*mobile*/
 @media (max-width: 600px) {
   .coach_bg img {
