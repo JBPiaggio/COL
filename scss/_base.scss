@@ -112,7 +112,7 @@ body{
     transition: width 600ms ease;
     background-color: $gris-blur;
     backdrop-filter: blur(4px);
-
+    z-index: 5;
     &-nav {
         list-style: none;
         @include mar0pad0;

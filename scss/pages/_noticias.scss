@@ -1,3 +1,4 @@
+
 .noticia{
     position: relative;
     &_banner{
@@ -8,11 +9,11 @@
     
     }
     &_blur{
-        width: 60vw;
-        margin-left: 20vw;
+        width: 70vw;
+        margin-left: 15vw;
         background-color: $gris-blur;
         position: absolute;
-        top: 17vh;
+        top: 43vw;
         backdrop-filter: blur(7px);
         border-radius: 25px;
     }   
@@ -57,4 +58,56 @@
     border-radius: 10px;
     justify-content: center;
     margin-left: 25vw;
+}
+@media (min-width: 600px) {
+    .recomendados{
+        display: flex;
+        align-items: center;
+        width: 80vw;
+        margin-left: 0vw;
+        justify-content: space-around;
+
+        &_sub{
+            height: 45vh;
+            width: 25vw;
+            margin: 5vw 5vw 0px;
+            img{
+                height: 15vh;
+                width: auto;
+            }
+        }
+    }
+    .noticia{
+        &_blur{
+            margin-left: 10vw;
+        
+        }
+        &_banner{
+            width: 80vw
+        
+        }
+        &_cuerpo{
+            width: 80vw;
+            img{
+                width: auto;
+                scale: 0.65;
+                float: left;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+   
+    }
+}
+
+@media (max-width: 325px) {
+    .noticia_cuerpo{
+        margin-top: 25vh;
+    }
+}
+@media (max-width: 980px) {
+    .noticia_cuerpo{
+        margin-top: 35vh;
+    }
 }

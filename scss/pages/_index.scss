@@ -228,7 +228,7 @@ video {
 
     &_slide {
         display: inline-block;
-        animation: 20s sponsor_inf infinite linear;
+        animation: 40s sponsor_inf infinite linear;
         img{
             margin-right: 15vw;
             width: 25vw;
@@ -236,9 +236,21 @@ video {
     }
    
 }
+
+$ancho_index_desktop: 85vw;
+
 @media (min-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 2rem;
+    }
     .noticias{
-        width: 85vw;
+        width: $ancho_index_desktop;
         height: 47vh;
         overflow: hidden;
         grid-template-columns: repeat(4,20vw);
@@ -256,7 +268,50 @@ video {
     }
     .card{
         img{
-            height: 10vh;
+            margin-left: 40vw;
+            margin-right: 40vw;
+            height: 20vh;
         }
+    }
+        .carrusel_nav{
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        left: 50%;
+        bottom: 17rem;
+        transform: translateX(-50%);
+        z-index: 1;
+        a{
+            width: 0.5rem;
+            background-color: aliceblue;
+            height: 0.5rem;
+            border-radius: 50%;
+            opacity: 0.75;
+            display: block;
+            position: relative;
+        }
+    }
+    .carrusel_contenedor{
+        
+        width: $ancho_index_desktop;
+        margin-left: 5vw;
+        border-radius: 25px;
+    }
+    .sponsors{
+        margin-left: -8rem;
+
+        padding: 20px 0;
+        &_slide {
+           img{
+                width: 10vw;
+                z-index: -2;
+            }
+        }
+       
+    }
+    .parrafo_index{
+        width: $ancho_index_desktop;
+        margin-left: 5vw;
+
     }
 }
