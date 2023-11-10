@@ -526,7 +526,7 @@ video {
   margin-left: 10%;
   width: 80%;
   box-sizing: border-box;
-  height: 30vh;
+  height: 10vh;
   background-color: rgba(0, 0, 0, 0.253);
   margin-bottom: 10px;
   border-radius: 25px;
@@ -720,12 +720,20 @@ video {
   .noticia_cuerpo {
     width: 80vw;
   }
+  .noticia_cuerpo p {
+    padding: 25px;
+  }
   .noticia_cuerpo img {
     width: auto;
-    scale: 0.65;
-    float: left;
+    height: 15vw;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+  }
+  .noticia_cuerpo img:nth-child(2n) {
+    float: left;
+  }
+  .noticia_cuerpo img:nth-child(4) {
+    float: right;
   }
 }
 @media (max-width: 325px) {
