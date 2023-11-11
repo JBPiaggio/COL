@@ -441,17 +441,15 @@ video {
   padding-top: 1vh;
 }
 .centrado .articulo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-top: 2vh;
   background-color: rgba(0, 0, 0, 0.253);
   border-radius: 25px;
-  width: 90vw;
 }
 .centrado .articulo-titulo {
+  display: flex;
   flex-direction: row;
-  margin-left: 10vw;
+  justify-content: center;
+  justify-content: center;
   color: aliceblue;
 }
 .centrado .articulo-logo {
@@ -460,15 +458,26 @@ video {
   transform: translateY(1.5vh);
 }
 .centrado .articulo-cuerpo {
-  width: 80vw;
   border-radius: 25px;
-  margin-left: 5vw;
-  padding-bottom: 20px;
 }
 .centrado p {
-  padding: 10px;
+  padding: 50px;
 }
 
+@media (max-width: 600px) {
+  .articulo {
+    width: 85vw;
+    margin: 0 auto;
+    margin-bottom: 10vh;
+  }
+  .articulo-cuerpo {
+    width: 80vw;
+    display: flex;
+    justify-self: center;
+    margin-left: 2.5vw;
+    margin-bottom: 20px;
+  }
+}
 .lema {
   color: aliceblue;
   font-family: "Montserrat", sans-serif;
